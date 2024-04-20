@@ -31,6 +31,7 @@ function PickDifficulty({ children, bgColor, link }: IProps) {
     const Link = styled.a`
         all: inherit;
         padding: 0;
+        width: 100%;
     `
 
     return (
