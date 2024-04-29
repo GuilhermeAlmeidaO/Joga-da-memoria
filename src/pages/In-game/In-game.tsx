@@ -193,7 +193,7 @@ function InGame() {
                 <div className={style.endGame}>
                     <p className={style.title} id="protectScreenEndGame__title"></p>
 
-                    <Link to='/'>Clique para voltar para a tela principal</Link>
+                    <Link to='/'>Página principal</Link>
                 </div>
             </div>
             <header>
