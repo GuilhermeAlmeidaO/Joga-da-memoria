@@ -81,7 +81,9 @@ function InGame() {
 
     const entries = Object.entries(listCards)
     const shuffledEntries = entries.sort(() => Math.random() - 0.5);
-    const shuffledEntries2 = entries.sort(() => Math.random() - 0.5);
+
+    const entries2 = [...entries]
+    const shuffledEntries2 = entries2.sort(() => Math.random() - 0.5);
 
     type InfoCardsType = {
         cardsOpenedID: string[]
