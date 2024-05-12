@@ -41,39 +41,39 @@
     }
 
     @media (max-width: 425px) {
-        .endGame{
+        .endGame {
             padding: 10px;
         }
     }
 }
 
-.containerCard{
-    div{
+.containerCard {
+    div {
         padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
 
-    .card{
-        background-color: #16A085;
-        color: #16A085;
-        margin: 5px;
-        font-size: 4rem;
-        padding: 10px;
-        text-align: center;
-        border: 1px solid transparent;
-        
-        i{
-            display: block;
-        }
-    }
+        .card {
+            background-color: #16A085;
+            color: #16A085;
+            margin: 5px;
+            font-size: 4rem;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid transparent;
 
-    @media (max-width: 425px) {
-        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-        padding: 0;
-    
-        .card{
-            font-size: 2rem;
+            i {
+                display: block;
+            }
         }
-    }
+
+        @media (max-width: 630px) {
+            grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+            padding: 0;
+
+            .card {
+                font-size: 2rem;
+            }
+        }
     }
 }
