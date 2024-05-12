@@ -24,7 +24,9 @@ function Home() {
 
             <div className={style.ProtectSreen} id='protectSreen'>
                 <div className={style.PickDifficulty}>
-                    <i className={`fa-solid fa-xmark ${style.PickDifficulty__closeButton}`} onClick={() => { closeProtectScreen() }}></i>
+                    <div className={style.container__PickDifficulty__closeButton}>
+                        <i className={`fa-solid fa-xmark ${style.PickDifficulty__closeButton}`} onClick={() => { closeProtectScreen() }}></i>
+                    </div>
                     <p className={style.PickDifficulty__title}>Escolha a dificuldade</p>
                     <PickDifficulty bgColor='limegreen' link='easy'>Fácil</PickDifficulty>
                     <PickDifficulty bgColor='yellow' link='normal'>Médio</PickDifficulty>

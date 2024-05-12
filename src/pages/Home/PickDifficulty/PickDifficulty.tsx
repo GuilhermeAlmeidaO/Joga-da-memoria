@@ -26,6 +26,10 @@ function PickDifficulty({ children, bgColor, link }: IProps) {
         @media (max-width: 425px){
             width: 120%;
         }
+
+        @media (max-width: 630px){
+            width: 100%;
+        }
     `
 
     const Link = styled.a`
