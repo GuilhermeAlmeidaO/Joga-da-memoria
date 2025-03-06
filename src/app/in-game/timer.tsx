@@ -1,5 +1,5 @@
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -28,7 +28,7 @@ export function Timer() {
 			| "noTime";
 		if (difficulty === "easy") setDifficultGameTime(120);
 		if (difficulty === "medium") setDifficultGameTime(80);
-		if (difficulty === "hard") setDifficultGameTime(2);
+		if (difficulty === "hard") setDifficultGameTime(50);
 
 		const countdown = setInterval(() => {
 			setDifficultGameTime((prevTime) => {
@@ -53,34 +53,38 @@ export function Timer() {
 	if (difficulty === "noTime") return;
 	if (displaySeg !== 0) {
 		return (
-			<div className="h-[5dvh] flex items-center justify-center">
-				<span className="text-xl">{displaySeg}</span>
-			</div>
+			<Suspense>
+				<div className="h-[5dvh] flex items-center justify-center">
+					<span className="text-xl">{displaySeg}</span>
+				</div>
+			</Suspense>
 		);
 	} else
 		return (
-			<AlertDialog open={true}>
-				<AlertDialogTrigger></AlertDialogTrigger>
-				<AlertDialogContent className="bg-neutral-950 text-white border-neutral-700">
-					<AlertDialogHeader>
-						<AlertDialogTitle className="text-xl">You lose!</AlertDialogTitle>
-						<AlertDialogDescription className="text-base">
-							Almost you win. Try it again if you have a good memory.
-						</AlertDialogDescription>
-					</AlertDialogHeader>
-					<AlertDialogFooter>
-						<AlertDialogAction
-							onClick={() =>
-								(location.href = `/in-game?difficulty=${difficulty}`)
-							}
-						>
-							Try this level again
-						</AlertDialogAction>
-						<AlertDialogAction onClick={() => (location.href = "/")}>
-							Back to home
-						</AlertDialogAction>
-					</AlertDialogFooter>
-				</AlertDialogContent>
-			</AlertDialog>
+			<Suspense>
+				<AlertDialog open={true}>
+					<AlertDialogTrigger></AlertDialogTrigger>
+					<AlertDialogContent className="bg-neutral-950 text-white border-neutral-700">
+						<AlertDialogHeader>
+							<AlertDialogTitle className="text-xl">You lose!</AlertDialogTitle>
+							<AlertDialogDescription className="text-base">
+								Almost you win. Try it again if you have a good memory.
+							</AlertDialogDescription>
+						</AlertDialogHeader>
+						<AlertDialogFooter>
+							<AlertDialogAction
+								onClick={() =>
+									(location.href = `/in-game?difficulty=${difficulty}`)
+								}
+							>
+								Try this level again
+							</AlertDialogAction>
+							<AlertDialogAction onClick={() => (location.href = "/")}>
+								Back to home
+							</AlertDialogAction>
+						</AlertDialogFooter>
+					</AlertDialogContent>
+				</AlertDialog>
+			</Suspense>
 		);
 }
