@@ -9,6 +9,7 @@ export function sameCard() {
 			const card = document.getElementById(cardId);
 			if (card === null) return;
 			card.dataset.matched = "true";
+			card.classList.add("bg-transparent", "border-2", "border-neutral-600");
 			data.cardsFound.push(cardId);
 		});
 		handleEndGame();

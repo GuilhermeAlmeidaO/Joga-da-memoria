@@ -26,9 +26,9 @@ export function Timer() {
 			| "medium"
 			| "hard"
 			| "noTime";
-		if (difficulty === "easy") setDifficultGameTime(120);
-		if (difficulty === "medium") setDifficultGameTime(80);
-		if (difficulty === "hard") setDifficultGameTime(50);
+		if (difficulty === "easy") setDifficultGameTime(140);
+		if (difficulty === "medium") setDifficultGameTime(100);
+		if (difficulty === "hard") setDifficultGameTime(70);
 
 		const countdown = setInterval(() => {
 			setDifficultGameTime((prevTime) => {

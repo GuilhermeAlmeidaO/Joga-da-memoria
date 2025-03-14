@@ -51,7 +51,7 @@ export default function Home() {
 							<Label htmlFor="easy" className="space-y-1 w-full">
 								<p>Easy</p>
 								<p className="text-neutral-300">
-									<span className="text-semibold">time: </span>120s
+									<span className="text-semibold">time: </span>140s
 								</p>
 							</Label>
 						</div>
@@ -63,7 +63,7 @@ export default function Home() {
 							<Label htmlFor="medium" className="space-y-1 w-full">
 								<p>Medium</p>
 								<p className="text-neutral-300">
-									<span className="text-semibold">time: </span>80s
+									<span className="text-semibold">time: </span>100s
 								</p>
 							</Label>
 						</div>
@@ -75,7 +75,7 @@ export default function Home() {
 							<Label htmlFor="hard" className="space-y-1 w-full">
 								<p>Hard</p>
 								<p className="text-neutral-300">
-									<span className="text-semibold">time: </span>50s
+									<span className="text-semibold">time: </span>70s
 								</p>
 							</Label>
 						</div>
